@@ -1,3 +1,4 @@
+const loading = document.querySelector(".loading");
 const startButton = document.querySelector(".start-button");
 const closeButton = document.querySelector(".close");
 const background = document.querySelector(".background");
@@ -46,6 +47,30 @@ const items = [
     { name: "correct", image: "./assets/img/Liu Kangs Mountain_River Card.png" },
     { name: "wrong", image: "./assets/img/Singapore River Card.png" }
 ];
+
+setTimeout(function() {
+    //your code to be executed after 1 second
+
+    document.body.style.display = "block"
+    onLoadSplash();
+
+}, 500);
+
+function onLoadSplash()
+{
+    console.log("Hi")
+    var delayInMilliseconds = 2000;
+    setTimeout(function() {
+        //your code to be executed after 1 second
+        console.log("test")
+        loading.classList.add("fade");
+        var delayInMilliseconds = 2000;
+        setTimeout(function() {
+            //your code to be executed after 1 second
+            loading.classList.add("hide")
+        }, delayInMilliseconds);
+    }, delayInMilliseconds);
+}
 
 const generateRandom = (size = 3) => {
     //temporary array

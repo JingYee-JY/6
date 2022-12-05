@@ -87,6 +87,40 @@ body {
     text-align: center;
 }
 
+.loading{
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    background-color: #CE0E2D;
+}
+
+.load_div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.load_image{
+    position: relative;
+    height: auto;
+    width: 200px;
+}
+
+.gimme_logo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fade {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+}
+
 .description-container {
     border: 2px solid #CE0E2D;
     background-color: #CE0E2D;
@@ -606,6 +640,7 @@ small {
 
 @media (orientation:landscape) and (max-width: 991px) {
 
+    .loading,
     .start,
     .game,
     .end,
@@ -616,10 +651,17 @@ small {
     }
 
 
-    .splash {
+    .header{
+        z-index: 10000 !important;
+    }
+    .splash{
         display: block;
         position: fixed;
         width: 100%;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 10000;
     }
 }
 
